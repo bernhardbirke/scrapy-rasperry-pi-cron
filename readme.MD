@@ -25,25 +25,25 @@ further explanation of this step can be found [here](https://geektechstuff.com/2
 
 Run `sudo pip3 install scrapy` in your venv environment.
 
-### Create a Web Crawler
+## Create a Web Crawler using Scrapy
 
 Scrapy is a fast high-level web crawling and web scraping framework, used to crawl websites and extract structured data from their pages.
 
-#### Spider
+### Spider
 
 A so called spider is used to extract the data from the webpage.
 The information can be found on `https://shop.boulderbar.net:8080/modules/bbext/CustomerCapacity.php?gym=hbf`. Using CSS Selectors and html tags a string (for example "35%") is selected via `div.capacity_auslastung center h2::text`.
 
-#### Processing the Data
+### Processing the Data
 
 An `item.py`, an `itemloader.py` and `pipelines.py` are used to process the data and convert it to a float number.
 Further information regarding this process can be found at the [official documentation](https://docs.scrapy.org/en/latest/intro/tutorial.html) and in this [tutorial from scrapeops.io](https://scrapeops.io/python-scrapy-playbook/scrapy-beginners-guide/)
 
-### run the crawler manually
+## Run the crawler manually
 
 To run the crawler you can go to the top level directory of the project and use the command `scrapy crawl boulderbarhbf`.
 
-### Schedule the crawler
+## Schedule the crawler
 
 To run the crawler on schedule, a shell file (getdata.sh) is created. Always using full path directories here (including /home/username/etc..).
 
