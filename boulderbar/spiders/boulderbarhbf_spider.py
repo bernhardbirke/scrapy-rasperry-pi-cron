@@ -8,7 +8,7 @@ class boulderSpider(scrapy.Spider):
     name = "boulderbarhbf"
 
     start_urls = [
-        "https://shop.boulderbar.net:8080/modules/bbext/CustomerCapacity.php?gym=hbf"]
+        "https://flash-cloud.boulderbar.net/modules/bbext/CustomerCapacity.php?gym=hbf#no-back-button"]
 
     def parse(self, response):
         percentageLine = response.css('div.capacity_auslastung')

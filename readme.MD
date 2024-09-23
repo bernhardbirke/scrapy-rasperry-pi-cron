@@ -21,9 +21,18 @@ source ./venv/bin/activate
 
 further explanation of this step can be found [here](https://geektechstuff.com/2019/01/14/creating-a-virtual-python-environment-python/).
 
+as an alternative you can use: 
+```
+conda create -n py39 python=3.9
+conda activate py39
+```
+
+further explanation of this step can be found [here](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-python.html)
+
+
 ### Install Scrapy
 
-Run `sudo pip3 install scrapy` in your venv environment.
+Run `pip install scrapy` in your venv environment.
 
 ## Create a Web Crawler using Scrapy
 
@@ -51,6 +60,25 @@ To run the crawler on schedule, a shell file (getdata.sh) is created. Always usi
 #!/bin/bash
 #activate virtual environment
 source "/full/path/to/project/venv/bin/activate"
+
+#move to the project directory
+cd /full/path/to/project/
+
+#start spider
+scrapy crawl boulderbarhbf -o boulderbar.jsonl
+```
+
+or if using a conda environment:
+
+use  `conda init -vv` to get the correct directory to activate
+
+
+```
+#!/bin/bash
+
+#activate environment
+ $ conda init -vv
+source /path/to/condaenvironment/bin/activate name_of_env
 
 #move to the project directory
 cd /full/path/to/project/

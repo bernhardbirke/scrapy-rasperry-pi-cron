@@ -1,7 +1,15 @@
 #specific files to ignore
 /boulderbarhan.jsonl
 /boulderbarhbf.jsonl
+/boulderbarwb.jsonl
+/boulderbarstp.jsonl
+/boulderbar/boulderbarhan.jsonl
+/boulderbar/boulderbarhbf.jsonl
+/boulderbar/boulderbarstp.jsonl
+/boulderbar/boulderbarwb.jsonl
+
 /data_readme.txt
+/boulderbar_shell.sh
 
 
 # Byte-compiled / optimized / DLL files
